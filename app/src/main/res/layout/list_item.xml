@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/message_user"
+        android:textColor="@color/black"
+        android:textStyle="normal|bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dp"
+        android:textColor="@color/black"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/message_time"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/message_text"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/message_user"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:background="@drawable/fields"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+</RelativeLayout>
