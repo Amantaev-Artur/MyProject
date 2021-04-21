@@ -1,6 +1,9 @@
 package com.example.a123.ui.chat;
 
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,30 +26,33 @@ import com.firebase.ui.database.FirebaseListAdapter;
 import com.firebase.ui.database.FirebaseListOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class ChatFragment extends Fragment {
 
-    private ChatViewModel chatViewModel;
     private static int SIGN_IN_CODE = 1;
-    private RelativeLayout activity_map;
+    private RelativeLayout activity_chat;
     private FirebaseListAdapter<Message> adapter;
     private FloatingActionButton sendBtn;
-    private DatabaseReference messages;
+    private ListView list_of_message;
     private View view;
+    private String email;
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_chat, container, false);
+
+        activity_chat = view.findViewById(R.id.activity_chat);
+        list_of_message = view.findViewById(R.id.list_of_message);
+
+        Load_setting();
 
         displayAllMessages();
 
-
-
-        String email = EMAIL.svar1;
+        email = EMAIL.YourEMAIL;
         sendBtn = (FloatingActionButton)view.findViewById(R.id.btnSend);
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +69,9 @@ public class ChatFragment extends Fragment {
                 textField.setText("");
             }
         });
+
         return view;
+
     }
 
     private void displayAllMessages() {
@@ -90,5 +98,15 @@ public class ChatFragment extends Fragment {
             }
         };
         listOfMessages.setAdapter(adapter);
+    }
+
+    public void Load_setting() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        boolean chk_night = sp.getBoolean("NIGHT", false);
+        if (chk_night) {
+            activity_chat.setBackgroundColor(Color.parseColor("#222222"));
+        } else {
+            activity_chat.setBackgroundColor(Color.parseColor("#ffffff"));
+        }
     }
 }

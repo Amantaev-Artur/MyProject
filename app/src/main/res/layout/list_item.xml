@@ -2,7 +2,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,14 +12,14 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="7dp"
         android:id="@+id/message_user"
-        android:textColor="@color/black"
+        android:textColor="@color/turquoise"
         android:textStyle="normal|bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="7dp"
-        android:textColor="@color/black"
+        android:textColor="@color/turquoise"
         android:layout_alignParentEnd="true"
         android:id="@+id/message_time"/>
 

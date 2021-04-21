@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_home"
     tools:context=".ui.home.HomeFragment">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="50sp"
+        android:text="УУУУУУУУУУУ" />
 </androidx.constraintlayout.widget.ConstraintLayout>

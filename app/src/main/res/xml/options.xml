@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Enable Night Mode">
+
+        <CheckBoxPreference
+            android:title="Night Mode"
+            android:summaryOn="Night mode is activated"
+            android:summaryOff="Night mode is deactivated"
+            android:key="NIGHT"
+            app:titleTextColor="@color/green"
+            app:subtitleTextColor="@color/green"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="Screen Orientation">
+        <ListPreference
+            android:title="Orientation"
+            android:key="ORIENTATION"
+            android:defaultValue="false"
+            app:titleTextColor="@color/green"
+            app:subtitleTextColor="@color/green"
+            android:entryValues="@array/items_value"
+            android:entries="@array/items_name"/>
+    </PreferenceCategory>
+
+    <Preference
+        android:title="@string/exit"
+        android:icon="@drawable/ic_exit"
+        android:key="@string/exit"
+        android:summary=""
+        />
+
+    <Preference
+        android:title="@string/exit_account"
+        android:icon="@drawable/ic_exit_account"
+        android:key="@string/exit_account"
+        android:summary=""
+        />
+
+</PreferenceScreen>

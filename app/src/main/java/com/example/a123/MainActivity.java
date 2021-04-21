@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             Snackbar.make(activity_main, "Вы авторизованы", Snackbar.LENGTH_LONG).show();
             Intent intent = new Intent(MainActivity.this, Activity.class);
             intent.putExtra("EMAIL",user.getEmail());
-            EMAIL.svar1 = user.getEmail();
+            EMAIL.YourEMAIL = user.getEmail();
             startActivity(intent);
             finish();
         }

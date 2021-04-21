@@ -59,5 +59,6 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui:0.6.2'
     implementation 'com.google.firebase:firebase-core:18.0.3'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
 
 }
