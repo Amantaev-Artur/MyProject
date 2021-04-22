@@ -1,18 +1,14 @@
-package com.example.a123.ui.slideshow;
+package com.example.a123.ui.map;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.a123.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -25,7 +21,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
-public class SlideshowFragment extends Fragment implements OnMapReadyCallback {
+public class Map extends Fragment implements OnMapReadyCallback {
 
     private GoogleMap map;
     private SupportMapFragment mapFragment;
@@ -35,7 +31,7 @@ public class SlideshowFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public View onCreateView( LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+        View root = inflater.inflate(R.layout.fragment_map, container, false);
         return root;
     }
 

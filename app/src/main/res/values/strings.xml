@@ -10,8 +10,8 @@
     <string name="action_help">Помощь</string>
 
     <string name="menu_home">Главная</string>
-    <string name="menu_gallery">Чат</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_chat">Чат</string>
+    <string name="menu_map">Карта</string>
     <string name="exit">Выйти</string>
     <string name="exit_account">Выйти из аккаунта</string>
 </resources>

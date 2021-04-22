@@ -90,7 +90,7 @@ public class Activity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.action_help:
-                intent = new Intent(Activity.this, Activity.class);
+                intent = new Intent(Activity.this, Help.class);
                 startActivity(intent);
                 finish();
                 return true;
@@ -103,11 +103,5 @@ public class Activity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
     }
 }
